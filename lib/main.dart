@@ -54,6 +54,7 @@ void main() {
           const Spacer(),
           FloatingActionButton(
             onPressed: () {},
+            backgroundColor: Colors.green,
             child: const Icon(Icons.add),
           ),
         ],
