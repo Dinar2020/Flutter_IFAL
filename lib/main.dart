@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart'
     show
+        Alignment,
         AppBar,
         Card,
+        Center,
         Colors,
         Column,
         EdgeInsets,
@@ -16,6 +18,8 @@ import 'package:flutter/material.dart'
         Scaffold,
         Spacer,
         Text,
+        TextAlign,
+        TextDirection,
         Widget,
         runApp;
 
@@ -39,7 +43,11 @@ void main() {
       ),
     ]),
     appBar: AppBar(
-      title: const Text('Transferências'),
+      // ignore: prefer_const_constructors
+      title: Text(
+        'Transferências',
+      ),
+      centerTitle: true,
     ),
     floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     floatingActionButton: Padding(
