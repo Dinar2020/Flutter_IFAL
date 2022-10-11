@@ -4,12 +4,17 @@ import 'package:flutter/material.dart'
         Card,
         Colors,
         Column,
+        EdgeInsets,
         FloatingActionButton,
+        FloatingActionButtonLocation,
         Icon,
         Icons,
         ListTile,
         MaterialApp,
+        Padding,
+        Row,
         Scaffold,
+        Spacer,
         Text,
         Widget,
         runApp;
@@ -35,11 +40,27 @@ void main() {
     ]),
     appBar: AppBar(
       title: const Text('Transferências'),
-      backgroundColor: Colors.deepOrange[200],
     ),
-    floatingActionButton:
-        FloatingActionButton(onPressed: () {}, child: const Icon(Icons.add)),
+    floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+    floatingActionButton: Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 12),
+      child: Row(
+        children: [
+          FloatingActionButton(
+            onPressed: () {},
+            backgroundColor: Colors.red,
+            child: const Icon(Icons.remove),
+          ),
+          const Spacer(),
+          FloatingActionButton(
+            onPressed: () {},
+            child: const Icon(Icons.add),
+          ),
+        ],
+      ),
+    ),
   );
+
   return runApp(MaterialApp(
     home: scaffold,
   ));
